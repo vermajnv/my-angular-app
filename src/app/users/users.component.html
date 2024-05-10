@@ -3,7 +3,8 @@
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let user of users">{{user.name}}</li>
     </ul>
-    <button [disabled]="!allowAddUser" class="btn btn-primary">Add User</button>
+    <input type="text" (input)="onInsertUser($event)">
+    <button [disabled]="!allowAddUser" class="btn btn-primary" (click)="onSubmitUser()">Add User</button>
     <p>{{allowAddUser}}</p>
     <p [innerText]="allowAddUser"></p>
 </div>
