@@ -6,5 +6,9 @@ import { Component } from "@angular/core";
     styleUrls : ['./blogs.component.css']
 })
 export class BlogsComponent {
+    blogTitle : string = 'This is the blog title';
 
+    getBlogStatus() : string {
+        return 'Up and Running'
+    }
 }

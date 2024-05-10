@@ -1,8 +1,9 @@
 <div>
     <h2>User Listing</h2>
     <ul class="list-group">
-        <li class="list-group-item">Nayan</li>
-        <li class="list-group-item">Golu</li>
-        <li class="list-group-item">Neha</li>
+        <li class="list-group-item" *ngFor="let user of users">{{user.name}}</li>
     </ul>
+    <button [disabled]="!allowAddUser" class="btn btn-primary">Add User</button>
+    <p>{{allowAddUser}}</p>
+    <p [innerText]="allowAddUser"></p>
 </div>
