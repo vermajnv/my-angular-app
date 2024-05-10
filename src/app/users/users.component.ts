@@ -7,7 +7,7 @@ import {Component} from '@angular/core'
 
 export class UsersComponent {
     allowAddUser = false;
-    userName : string = 'Nayan';
+    userName : string;
     userObj : {name : string, email : string | null};
     users : {name : string, email : string}[] = [
         {
@@ -28,12 +28,9 @@ export class UsersComponent {
         }, 2000)
     }
 
-    onInsertUser(event : any) {
-        this.userObj = { name : event.target.value, email : event.target.value}
-    }
-    
     onSubmitUser()
     {
+        this.userObj = { name : this.userName, email : this.userName}
         this.users.push(this.userObj)
     }
 }
