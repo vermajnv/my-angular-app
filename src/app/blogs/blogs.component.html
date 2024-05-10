@@ -1,5 +1,10 @@
-<div>
-    <span class="label label-default">{{blogTitle}}</span>
-    <h3>{{getBlogStatus()}}</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam totam dolorum illum provident cum ipsa aut excepturi, eveniet necessitatibus, at quis vitae! Fugiat placeat odit voluptates laborum veritatis officiis numquam.</p>
+<div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" [(ngModel)]="inputTitle" (input)="changeButtonStatus()">
+    <button [disabled]="!addButtonStatus" (click)="addTitle()" class="btn btn-primary">Add Title</button>
+</div>
+
+<div *ngFor="let blog of blogs">
+    <span class="label label-default">{{blog.title}}</span>
+    <p>{{blog.description}}</p>
 </div>
