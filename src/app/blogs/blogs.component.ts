@@ -9,7 +9,7 @@ type blogType = {title : string, description : string}[];
 })
 
 export class BlogsComponent {
-    inputTitle : string;
+    inputTitle : string = '';
     addButtonStatus : boolean = false;
     blogs : blogType = [ 
         {
@@ -26,15 +26,15 @@ export class BlogsComponent {
     {
         this.blogs.push({ title : this.inputTitle, description : 'Description'})
         this.inputTitle = '';
-        this.changeButtonStatus()
+        // this.changeButtonStatus()
     }
     
-    changeButtonStatus()
-    {
-        if(this.inputTitle.length > 0)
-        {
-            return this.addButtonStatus = true;
-        }
-        return this.addButtonStatus = false
-    }
+    // changeButtonStatus()
+    // {
+    //     if(this.inputTitle.length > 0)
+    //     {
+    //         return this.addButtonStatus = true;
+    //     }
+    //     return this.addButtonStatus = false
+    // }
 }
